@@ -12,11 +12,11 @@ namespace GameScore.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]
-    public class leaderboardController : Controller
+    public class LeaderBoardController : Controller
     {
         private readonly ScoreRepository _scoreRepository;
 
-        public leaderboardController(ScoreRepository scoreRepository)
+        public LeaderBoardController(ScoreRepository scoreRepository)
         {
             _scoreRepository = scoreRepository;
         }
@@ -27,6 +27,21 @@ namespace GameScore.Controllers
         {
             return await _scoreRepository.GetAllScores();
         }
+
+     
+        [HttpPost]
+        public async void Post([FromBody] ScoreParam newScore)
+        {
+            _scoreRepository.AddScore(new Score
+            {
+                GameId = newScore.GameId,
+                Win = newScore.Win,
+                TimeSpan = newScore.TimeSpan,
+                PlayerId = newScore.PlayerId
+            });
+        }
+
+
 
         // Call an initialization - api/system/init
         [HttpGet("{setting}")]
