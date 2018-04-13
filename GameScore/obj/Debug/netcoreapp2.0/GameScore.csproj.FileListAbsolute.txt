@@ -8,3 +8,4 @@ C:\Users\fausto\source\repos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameSco
 C:\Users\fausto\source\repos\GameScore\GameScore\bin\Debug\netcoreapp2.0\GameScore.pdb
 C:\Users\fausto\source\repos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameScore.dll
 C:\Users\fausto\source\repos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameScore.pdb
+C:\Users\fausto\source\repos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameScore.csprojResolveAssemblyReference.cache

@@ -1,13 +1,15 @@
 ﻿using GameScore.Model;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace GameScore.Data
 {
-    public class ScoreRepository 
+    public class ScoreRepository
     {
         private readonly ScoreContext _context = null;
 
@@ -18,12 +20,27 @@ namespace GameScore.Data
 
         public async Task AddScore(Score item)
         {
-                await _context.Scores.InsertOneAsync(item);
+            await _context.Scores.InsertOneAsync(item);
         }
 
         public async Task<IEnumerable<Score>> GetAllScores()
         {
-                return await _context.Scores.Find(_ => true).ToListAsync();
+            return await _context.Scores.Find(_ => true).ToListAsync();
+        }
+
+        public async Task<IEnumerable<object>> GetScores()
+        {
+            var group = _context.Scores.AsQueryable()
+                          .Where(_ => true)
+                          .GroupBy(s => new { s.PlayerId })
+                          .Select(n => new
+                          {
+                              PlayerId = n.Key.PlayerId,
+                              point = n.Sum(p => p.Win),
+                              date = n.Max(o => o.TimeSpan)
+                          });
+
+            return await group.Take(100).ToListAsync();
         }
 
         public async Task<bool> UpdateScoreDocument(int id, Score item)

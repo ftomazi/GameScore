@@ -23,12 +23,12 @@ namespace GameScore.Controllers
 
         [NoCache]
         [HttpGet]
-        public async Task<IEnumerable<Score>> Get()
+        public async Task<IEnumerable<object>> Get()
         {
-            return await _scoreRepository.GetAllScores();
+            //  return await _scoreRepository.GetAllScores();
+            return await _scoreRepository.GetScores();
         }
-
-     
+             
         [HttpPost]
         public async void Post([FromBody] ScoreParam newScore)
         {
@@ -40,12 +40,10 @@ namespace GameScore.Controllers
                 PlayerId = newScore.PlayerId
             });
         }
-
-
-
+        
         // Call an initialization - api/system/init
-        [HttpGet("{setting}")]
-        public string Get(string setting)
+        [HttpPost("{setting}")]
+        public string Post(string setting)
         {
             if (setting == "init")
             {
@@ -79,13 +77,10 @@ namespace GameScore.Controllers
                     TimeSpan = DateTime.Now,
                     Win = 50
                 });
-
                 return "Done";
             }
-
             return "Unknown";
         }
-
 
     }
 }
