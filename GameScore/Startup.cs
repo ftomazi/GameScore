@@ -1,5 +1,4 @@
 ﻿using GameScore.Data;
-using GameScore.Interfaces;
 using GameScore.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,7 +26,7 @@ namespace GameScore
                 options.Database = Configuration.GetSection("MongoConnection:Database").Value;
             });
 
-            services.AddTransient<IScoreRepository, ScoreRepository>();
+            services.AddTransient<ScoreRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

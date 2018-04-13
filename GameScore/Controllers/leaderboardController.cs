@@ -1,5 +1,6 @@
-﻿using GameScore.Infra;
-using GameScore.Interfaces;
+﻿using GameScore.Data;
+using GameScore.Infra;
+
 using GameScore.Model;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,9 +14,9 @@ namespace GameScore.Controllers
     [Route("api/[controller]")]
     public class leaderboardController : Controller
     {
-        private readonly IScoreRepository _scoreRepository;
+        private readonly ScoreRepository _scoreRepository;
 
-        public leaderboardController(IScoreRepository scoreRepository)
+        public leaderboardController(ScoreRepository scoreRepository)
         {
             _scoreRepository = scoreRepository;
         }
@@ -26,6 +27,50 @@ namespace GameScore.Controllers
         {
             return await _scoreRepository.GetAllScores();
         }
+
+        // Call an initialization - api/system/init
+        [HttpGet("{setting}")]
+        public string Get(string setting)
+        {
+            if (setting == "init")
+            {
+               // _scoreRepository.RemoveAllNotes();
+                _scoreRepository.AddScore(new Score()
+                {
+                    GameId = 1,
+                    PlayerId = 1,
+                    TimeSpan = DateTime.Now,
+                    Win = 200
+                });
+                _scoreRepository.AddScore(new Score()
+                {
+                    GameId = 1,
+                    PlayerId=1,
+                    TimeSpan = DateTime.Now,
+                    Win = 20               
+
+                });
+                _scoreRepository.AddScore(new Score()
+                {
+                    GameId = 1,
+                    PlayerId = 2,
+                    TimeSpan = DateTime.Now,
+                    Win = 200
+                });
+                _scoreRepository.AddScore(new Score()
+                {
+                    GameId = 1,
+                    PlayerId = 1,
+                    TimeSpan = DateTime.Now,
+                    Win = 50
+                });
+
+                return "Done";
+            }
+
+            return "Unknown";
+        }
+
 
     }
 }
