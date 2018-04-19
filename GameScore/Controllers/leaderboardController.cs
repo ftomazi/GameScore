@@ -30,7 +30,7 @@ namespace GameScore.Controllers
         }
              
         [HttpPost]
-        public async void Post([FromBody] ScoreParam newScore)
+        public void Post([FromBody] ScoreParam newScore)
         {
             _scoreRepository.AddScore(new Score
             {

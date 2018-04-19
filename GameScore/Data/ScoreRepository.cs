@@ -1,4 +1,5 @@
 ﻿using GameScore.Model;
+using MessageQueue;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
@@ -40,19 +41,22 @@ namespace GameScore.Data
                               date = n.Max(o => o.TimeSpan)
                           });
 
-            return await group.Take(100).ToListAsync();
+            return  group.Take(100).ToList();
         }
 
         public async Task<bool> UpdateScoreDocument(int id, Score item)
         {
             try
             {
-                ReplaceOneResult actionResult = await _context.Scores
-                                                .ReplaceOneAsync(n => n.PlayerId.Equals(id)
-                                                                , item
-                                                                , new UpdateOptions { IsUpsert = true });
-                return actionResult.IsAcknowledged
-                    && actionResult.ModifiedCount > 0;
+                //ReplaceOneResult actionResult = await _context.Scores
+                //                                .ReplaceOneAsync(n => n.PlayerId.Equals(id)
+                //                                                , item
+                //                                                , new UpdateOptions { IsUpsert = true });
+                //return actionResult.IsAcknowledged
+                //    && actionResult.ModifiedCount > 0;
+                MessagesWork ff = new MessagesWork();
+                await ff.GravaMsg(new object());
+                return true;
             }
             catch (Exception ex)
             {

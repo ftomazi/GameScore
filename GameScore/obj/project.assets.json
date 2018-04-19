@@ -5269,6 +5269,15 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "MessageQueue/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/MessageQueue.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MessageQueue.dll": {}
+        }
       }
     }
   },
@@ -13644,10 +13653,16 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "MessageQueue/1.0.0": {
+      "type": "project",
+      "path": "../MessageQueue/MessageQueue.csproj",
+      "msbuildProject": "../MessageQueue/MessageQueue.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "MessageQueue >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.6",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.3",
@@ -13683,7 +13698,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\fausto\\source\\repos\\GameScore\\MessageQueue\\MessageQueue.csproj": {
+              "projectPath": "C:\\Users\\fausto\\source\\repos\\GameScore\\MessageQueue\\MessageQueue.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

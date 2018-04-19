@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameScore", "GameScore\GameScore.csproj", "{33C9F37F-5F29-4840-9417-447E5D32DB13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageQueue", "MessageQueue\MessageQueue.csproj", "{6B21331C-3E33-4F6F-AFCA-703E1C1C68C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{33C9F37F-5F29-4840-9417-447E5D32DB13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33C9F37F-5F29-4840-9417-447E5D32DB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33C9F37F-5F29-4840-9417-447E5D32DB13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B21331C-3E33-4F6F-AFCA-703E1C1C68C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B21331C-3E33-4F6F-AFCA-703E1C1C68C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B21331C-3E33-4F6F-AFCA-703E1C1C68C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B21331C-3E33-4F6F-AFCA-703E1C1C68C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
