@@ -9,3 +9,17 @@ C:\Users\fausto\source\repos\GameScore\GameScore\bin\Debug\netcoreapp2.0\GameSco
 C:\Users\fausto\source\repos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameScore.dll
 C:\Users\fausto\source\repos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameScore.pdb
 C:\Users\fausto\source\repos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameScore.csprojResolveAssemblyReference.cache
+C:\Fausto\Projetos\GameScore\GameScore\bin\Debug\netcoreapp2.0\GameScore.deps.json
+C:\Fausto\Projetos\GameScore\GameScore\bin\Debug\netcoreapp2.0\GameScore.runtimeconfig.json
+C:\Fausto\Projetos\GameScore\GameScore\bin\Debug\netcoreapp2.0\GameScore.runtimeconfig.dev.json
+C:\Fausto\Projetos\GameScore\GameScore\bin\Debug\netcoreapp2.0\GameScore.dll
+C:\Fausto\Projetos\GameScore\GameScore\bin\Debug\netcoreapp2.0\GameScore.pdb
+C:\Fausto\Projetos\GameScore\GameScore\bin\Debug\netcoreapp2.0\MessageQueue.dll
+C:\Fausto\Projetos\GameScore\GameScore\bin\Debug\netcoreapp2.0\MessageQueue.pdb
+C:\Fausto\Projetos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameScore.csprojAssemblyReference.cache
+C:\Fausto\Projetos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameScore.csproj.CoreCompileInputs.cache
+C:\Fausto\Projetos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameScore.AssemblyInfoInputs.cache
+C:\Fausto\Projetos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameScore.AssemblyInfo.cs
+C:\Fausto\Projetos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameScore.csproj.CopyComplete
+C:\Fausto\Projetos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameScore.dll
+C:\Fausto\Projetos\GameScore\GameScore\obj\Debug\netcoreapp2.0\GameScore.pdb
